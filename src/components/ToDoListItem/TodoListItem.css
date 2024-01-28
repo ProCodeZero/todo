@@ -2,7 +2,7 @@
   vertical-align: -webkit-baseline-middle;
   color: azure;
   letter-spacing: 0.08rem;
-	cursor: pointer;
+  cursor: default;
 }
 .todo-list__btn {
   margin-left: 10px;
@@ -13,7 +13,7 @@
 .todo-list-item.done {
   text-decoration: line-through;
 }
-.todo-list-item.important{
-color: rgb(51, 157, 223);
-font-weight: 600;
+.todo-list-item.important {
+  color: rgb(51, 157, 223);
+  font-weight: 600;
 }
