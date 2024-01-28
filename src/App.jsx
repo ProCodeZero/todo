@@ -83,6 +83,9 @@ export default class App extends Component {
     this.setState({ term });
   };
 
+  onFilterChange = (filter) => {
+    this.setState({ filter });
+  };
   filterFn = (items, filter) => {
     switch (filter) {
       case "all":
@@ -110,7 +113,7 @@ export default class App extends Component {
             // Передаю функцию в панель поиска
             onSearchChange={this.onSearchChange}
           />
-          <FilterPanel />
+          <FilterPanel filter={filter} onFilterChange={this.onFilterChange} />
         </div>
         <TodoList
           todos={visibleItems}

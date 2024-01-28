@@ -9,20 +9,24 @@ export default class FilterPanel extends Component {
   ];
 
   render() {
-    const btns = this.btns.map(({ name, label }) => {});
+    const { filter, onFilterChange } = this.props;
+    const btns = this.btns.map(({ name, label }) => {
+      const isActive = filter === name;
+      const clazz = isActive ? "filter-btn-active" : "filter-btn-not-active";
+      return (
+        <button
+          type="button"
+          className={`btn filter-btn ${clazz}`}
+          key={name}
+          onClick={() => {
+            onFilterChange(name);
+          }}
+        >
+          {label}
+        </button>
+      );
+    });
 
-    return (
-      <div className="filter-panel">
-        <button type="button" className="btn filter-btn filter-btn-active">
-          All
-        </button>
-        <button type="button" className="btn filter-btn filter-btn-not-active">
-          Active
-        </button>
-        <button type="button" className="btn filter-btn filter-btn-not-active">
-          Done
-        </button>
-      </div>
-    );
+    return <div className="filter-panel">{btns}</div>;
   }
 }
