@@ -1,0 +1,19 @@
+.todo-list-item {
+  vertical-align: -webkit-baseline-middle;
+  color: azure;
+  letter-spacing: 0.08rem;
+	cursor: pointer;
+}
+.todo-list__btn {
+  margin-left: 10px;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+}
+.todo-list-item.done {
+  text-decoration: line-through;
+}
+.todo-list-item.important{
+color: rgb(51, 157, 223);
+font-weight: 600;
+}
